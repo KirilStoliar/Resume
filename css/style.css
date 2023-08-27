@@ -1,0 +1,264 @@
+:root {
+  --color1: rgb(202, 59, 59);
+  --color2: white;
+  --color3: #000;
+}
+
+body {
+  background-color: #cfbfbf;
+  font-family: "Montserrat";
+}
+
+.cl {
+  position: relative;
+}
+
+.header {
+  background-color: var(--color1);
+  margin-top: 12%;
+  max-height: max-content;
+  position: absolute;
+  max-width: 98%;
+}
+
+.name, .job {
+  vertical-align: center;
+  margin-left: 25%;
+  letter-spacing: 0.15rem;
+}
+
+.name {
+  font-size: 1.7rem;
+  margin-top: 1.2rem;
+  color: var(--color2);
+}
+
+.job {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  color: --var(--color3);
+}
+
+.main {
+  padding: 0;
+}
+
+h6 {
+  margin-top: 1.5rem;
+}
+  
+h4 {
+  margin-top: 2rem;
+}
+
+.list, .description, .descr, .contacts {
+  margin-top: 1rem;
+}
+
+.color-left {
+  background-color: rgb(58, 54, 54);
+  padding-left: 3%;
+}
+
+.my-photo {
+  max-width: 50%;
+  margin-top: 5%;
+  position: relative;
+  z-index: 100;
+}
+
+.skills, .contact, .profile, .lang {
+  color: var(--color1);
+}
+
+.list {
+  color: var(--color2);
+  padding-left: 5%;
+}
+
+.description, .contacts {
+  color: var(--color2);
+  padding-right: 2rem;
+}
+
+.contacts {
+  line-height: 0.8rem;
+}
+
+.languages {
+  margin-bottom: 5rem;
+}
+
+.photo-hidden {
+  max-width: 40%;
+  position: relative;
+  opacity: 0;
+  margin-bottom: -1.8rem;
+}
+
+.right {
+  padding-left: 3%;
+}
+
+.exp, .education {
+  color: var(--color1);
+}
+
+.descr {
+  color: var(--color3);
+}
+
+.click {
+  text-decoration: none;
+  animation: white-violet 3s infinite;
+}
+
+.time {
+  color: var(--color1);
+  margin-bottom: 0.4rem;
+}
+
+.code {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width:992px) {
+  .cl {
+    max-width: 950px;
+  }
+
+  .photo-hidden {
+    margin-bottom: -1.3rem;
+  }
+}
+
+@media screen and (max-width:867px) {
+  .cl {
+    max-width: 840px;
+  }
+
+  .photo-hidden {
+    margin-bottom: -1.1rem;
+  }
+
+  .name {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+
+  .job {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 0.8rem;
+  }
+
+  .list, .description, .descr, .contacts, .code, .time {
+    font-size: 0.8rem;
+  }
+
+  .contacts {
+    line-height: 0.5rem;
+  }
+
+  .list {
+    padding-left: 6%;
+  }
+}
+
+@media screen and (max-width:715px) {
+  .cl {
+    max-width: 695px;
+  }
+
+  .photo-hidden {
+    margin-bottom: -0.8rem;
+  }
+
+  .header {
+    height: 5rem;
+  }
+
+  .name {
+    font-size: 1rem;
+    margin-top: 0.8rem;
+  }
+
+  .job {
+    font-size: 0.8rem;
+  }
+
+  h4 {
+    font-size: 0.8rem;
+    margin-top: 1.3rem;
+  }
+
+  h6 {
+    font-size: 0.6rem;
+    margin-top: 0.8rem;
+  }
+
+  .list, .description, .descr, .contacts, .code, .time {
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+  }
+
+  .contacts {
+    line-height: 0.2rem;
+  }
+
+}
+
+@media screen and (max-width:565px) {
+  .cl {
+    max-width: 550px;
+  }
+
+  .color-left {
+    width: 100%;
+    padding-left: 6%;
+  }
+
+  .my-photo {
+    width: 40%;
+  }
+
+  .header {
+    margin-top: 25%;
+  }
+
+  .name, .job {
+    padding-left: 20%;
+  }
+
+  .name {
+    font-size: rem;
+  }
+
+  .languages {
+    margin-bottom: 0;
+  }
+
+  .photo-hidden {
+    display: none;
+  }
+
+  .col-7 {
+    width: 100%;
+  }
+
+  .descr{
+    margin-top: 0.4rem;
+  }
+
+  .contacts {
+    margin-top: 0.8rem;
+  }
+}
