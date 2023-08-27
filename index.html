@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="js/styles/agate.min.css">
+</head>
+
+<body>
+  <div class="container cl">
+    <div class="row">
+      <div class="col-12 header">
+        <p class="text-uppercase name"><b>Kiril Stoliar</b></p>
+        <p class="text-uppercase job"><b>java developer</b></p>
+      </div>
+    </div>
+    <div class="row main">
+      <div class="col-5 color-left">
+        <img src="assets/img/photo_2023-06-12_19-33-511.jpg" alt="my photo" class="img-fluid my-photo">
+        <div>
+          <h4 class="text-uppercase skills"><b>Skills</b></h4>
+          <ul class="list">
+            <li>Java Core</li>
+            <li>OOP</li>
+            <li>Stream API</li>
+            <li>Spring MVC</li>
+            <li>Spring Boot</li>
+            <li>Git/GitHub</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SQL</li>
+            <li>PostgreSQL/MySQL</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-uppercase profile"><b>Profile</b></h4>
+          <p class="description">At the end of last year he retired from his main job on January 1, 2023. He began
+            to study Java at JavaRush courses. During the study came the realization of the need to master the Spring
+            Framework, databases, libraries, Git/GitHub, etc. Having gained knowledge is ready to try out, as well as to
+            improve knowledge in the practical environment. In his previous job, he was a middle manager (producer of
+            works), which revealed the following traits of character:</p>
+          <ul class="list">
+            <li>stress tolerance and multitasking under conditions of increased urgency</li>
+            <li>perseverance</li>
+            <li>determination</li>
+          </ul>
+          <p class="description">I’m loyal to short-term assignments.</p>
+        </div>
+        <div>
+          <h4 class="text-uppercase contact"><b>Contacts</b></h4>
+          <div class="contacts">
+            <p>Phone/Viber: +37529 274-82-75</p>
+            <p>Email: kss200486@gmail.com</p>
+            <p>Telegram: @Sk181286</p>
+            <p>Linkedin: <a class="click"
+                href="https://www.linkedin.com/in/kiril-stoliar/">linkedin.com/in/kiril-stoliar</a></p>
+            <p>Address: Belarus, Minsk</p>
+          </div>
+        </div>
+        <div class="languages">
+          <h4 class="text-uppercase lang"><b>Languages</b></h4>
+          <div>
+            <ul class="list">
+              <li>Russian (native)</li>
+              <li>Belorussian (native)</li>
+              <li>English (A2)</li>
+              <li>Polish (A1-A2)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-7">
+        <div class="right">
+          <div>
+            <img src="assets/img/photo_2023-06-12_19-33-511.jpg" alt="my photo" class="img-fluid photo-hidden">
+          </div>
+          <h4 class="text-uppercase exp"><b>experience</b></h4>
+          <div>
+            <h6 class="text-uppercase"><a class="click" href="https://javarush.com/"><b>javarush</b></a></h6>
+            <p class="time"><b>01/2023 - current time</b></p>
+            <p class="descr">During the training more than 600 practical tasks were solved, he wrote several mini-games.
+            </p>
+          </div>
+          <div>
+            <h6 class="text-uppercase"><a class="click"
+                href="https://www.youtube.com/watch?v=5ePo08sqcpk&list=RDCMUCK5d3n3kfkzlArMccS0TTXA&start_radio=1&rv=5ePo08sqcpk&t=6"><b>spring
+                  from alishev</b></a></h6>
+            <p class="time"><b>05/2023 - current time</b></p>
+            <p class="descr">He took a free Youtube course and a paid Udemy course at Nail Alishev.</p>
+          </div>
+          <div>
+            <h4 class="text-uppercase education"><b>education</b></h4>
+            <div>
+              <h6>Belorussian National Technical University</h6>
+              <p class="time"><b>09/2008 - 06/2014</b></p>
+              <p class="descr">Speciality - Energy Engineer</p>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-uppercase lang"><b>example code</b></h4>
+            <div>
+              <pre class="code">
+                <code class="language-java">
+public class Solution {
+  public static void main(String[] args) {
+    System.out.println(getObjectType(new Cat()));
+    System.out.println(getObjectType(new Tiger()));
+    System.out.println(getObjectType(new Lion()));
+    System.out.println(getObjectType(new Bull()));
+    System.out.println(getObjectType(new Cow()));
+    System.out.println(getObjectType(new Animal()));
+  }
+  public static String getObjectType(Object o) {
+    if(o instanceof Tiger) {
+      return "Тигр";
+    } else if(o instanceof Lion) {
+      return "Лев";
+    } else if(o instanceof Cat) {
+      return "Кот";
+    } else if(o instanceof Bull) {
+      return "Бык";
+    } else if(o instanceof Cow) {
+      return "Корова";
+    } else if(o instanceof Animal) {
+      return "Животное";
+    }
+    return null;
+  }
+  public static class Cat extends Animal {}
+  public static class Tiger extends Cat {}
+  public static class Lion extends Cat {}
+  public static class Bull extends Animal {}
+  public static class Cow extends Animal {}
+  public static class Animal {}
+}
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
