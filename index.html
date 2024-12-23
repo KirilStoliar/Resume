@@ -25,24 +25,24 @@
         <div>
           <h4 class="text-uppercase skills"><b>Skills</b></h4>
           <ul class="list">
-            <li>Java Core</li>
-            <li>OOP</li>
-            <li>Stream API</li>
+            <li>Java / Java Core</li>
+            <li>Hibernate</li>
+            <li>PostgreSQL / MySQL</li>
+            <li>Gradle / Maven</li>
+            <li>SQL / HQL</li>
+            <li>Git / GitHub</li>
             <li>Spring MVC</li>
             <li>Spring Boot</li>
-            <li>Git/GitHub</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SQL</li>
-            <li>PostgreSQL/MySQL</li>
+            <li>HTML / CSS</li>
+            <li>Junit / Mockito</li>
+            <li>Docker</li>
+            <li>Liquibase</li>
+            <li>Tomcat</li>
           </ul>
         </div>
         <div>
           <h4 class="text-uppercase profile"><b>Profile</b></h4>
-          <p class="description">At the end of last year he retired from his main job on January 1, 2023. He began
-            to study Java at JavaRush courses. During the study came the realization of the need to master the Spring
-            Framework, databases, libraries, Git/GitHub, etc. Having gained knowledge is ready to try out, as well as to
-            improve knowledge in the practical environment. In his previous job, I was a middle manager (producer of
+          <p class="description">Since the beginning of 2023 he started his path to learn programming and the language Java in particular. During these two years, constantly improved his knowledge of the chosen language, and later realized the need to study third-party services, databases and frameworks. As a result, the knowledge base has grown rapidly and is now listed in the skills section. In his previous job, I was a middle manager (producer of
             works), which revealed the following traits of character:</p>
           <ul class="list">
             <li>stress tolerance and multitasking under conditions of increased urgency</li>
@@ -56,7 +56,7 @@
           <div class="contacts">
             <p>Phone/Viber: +37529 274-82-75</p>
             <p>Email: kss200486@gmail.com</p>
-            <p>Telegram: @Sk181286</p>
+            <p>Telegram: https://t.me/Lifeisexcellent</p>
             <p>Linkedin: <a class="click"
                 href="https://www.linkedin.com/in/kiril-stoliar/">linkedin.com/in/kiril-stoliar</a></p>
             <p>Address: Belarus, Minsk</p>
@@ -82,16 +82,16 @@
           <h4 class="text-uppercase exp"><b>experience</b></h4>
           <div>
             <h6 class="text-uppercase"><a class="click" href="https://javarush.com/"><b>javarush</b></a></h6>
-            <p class="time"><b>01/2023 - current time</b></p>
-            <p class="descr">During the training more than 600 practical tasks were solved, he wrote several mini-games.
+            <p class="time"><b>06/2024 - 12/2024</b></p>
+            <p class="descr">During the training more than 600 practical tasks were solved, I wrote several mini-projects.
             </p>
           </div>
           <div>
             <h6 class="text-uppercase"><a class="click"
                 href="https://www.youtube.com/watch?v=5ePo08sqcpk&list=RDCMUCK5d3n3kfkzlArMccS0TTXA&start_radio=1&rv=5ePo08sqcpk&t=6"><b>spring
                   from alishev</b></a></h6>
-            <p class="time"><b>05/2023 - current time</b></p>
-            <p class="descr">He took a free Youtube course and a paid Udemy course at Nail Alishev.</p>
+            <p class="time"><b>05/2023 - 01/2024</b></p>
+            <p class="descr">I took a free Youtube course and a paid Udemy course at Nail Alishev.</p>
           </div>
           <div>
             <h4 class="text-uppercase education"><b>education</b></h4>
@@ -106,37 +106,38 @@
             <div>
               <pre class="code">
                 <code class="language-java">
-public class Solution {
-  public static void main(String[] args) {
-    System.out.println(getObjectType(new Cat()));
-    System.out.println(getObjectType(new Tiger()));
-    System.out.println(getObjectType(new Lion()));
-    System.out.println(getObjectType(new Bull()));
-    System.out.println(getObjectType(new Cow()));
-    System.out.println(getObjectType(new Animal()));
-  }
-  public static String getObjectType(Object o) {
-    if(o instanceof Tiger) {
-      return "Тигр";
-    } else if(o instanceof Lion) {
-      return "Лев";
-    } else if(o instanceof Cat) {
-      return "Кот";
-    } else if(o instanceof Bull) {
-      return "Бык";
-    } else if(o instanceof Cow) {
-      return "Корова";
-    } else if(o instanceof Animal) {
-      return "Животное";
+@Getter
+@Setter
+@Entity
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Table(name = "reference")
+@AllArgsConstructor
+@EqualsAndHashCode(of = {"refType", "code"}, callSuper = false)
+public class Reference extends TitleEntity {
+
+    @Column(name = "ref_type", nullable = false)
+    @Enumerated(EnumType.ORDINAL)
+    @NotNull
+    private RefType refType;
+
+    @Column(name = "code", nullable = false)
+    @Code
+    private String code;
+
+    @Column(name = "aux", columnDefinition = "varchar")
+    @Nullable
+    private String aux;
+
+    public Reference(Long id, RefType refType, String code, String title) {
+        super(id, title);
+        this.refType = refType;
+        this.code = code;
     }
-    return null;
-  }
-  public static class Cat extends Animal {}
-  public static class Tiger extends Cat {}
-  public static class Lion extends Cat {}
-  public static class Bull extends Animal {}
-  public static class Cow extends Animal {}
-  public static class Animal {}
+
+    @Override
+    public String toString() {
+        return refType + ":" + code + '(' + title + ')';
+    }
 }
                 </code>
               </pre>
